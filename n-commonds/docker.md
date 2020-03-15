@@ -1,23 +1,23 @@
-# Docker 命令大全
+# Docker 常用命令
 ## 1.Docker命令
 ### 1.1 容器生命周期管理
-run
-start/stop/restart
-kill
-rm
-pause/unpause
-create
-exec
+docker run
+docker start/stop/restart
+docker kill
+docker rm
+docker pause/unpause
+docker create
+docker exec
 ### 1.2 容器操作
-ps
-inspect
-top
-attach
-events
-logs
-wait
-export
-port
+docker ps
+docker inspect
+docker top
+docker attach
+docker events
+docker logs
+docker wait
+docker export
+docker port
 ### 1.3 容器rootfs命令
 commit
 cp
