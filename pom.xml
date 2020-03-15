@@ -6,7 +6,7 @@
     <groupId>com.back</groupId>
     <artifactId>nota</artifactId>
     <packaging>jar</packaging>
-    <version>1.0.0-SNAPSHOT</version>
+    <version>1.0.1-SNAPSHOT</version>
 
     <name>nota</name>
 
@@ -21,7 +21,7 @@
 
     <scm>
         <!--release包需要放入的nexus或者其他maven release包的仓库url地址-->
-        <url>https://github.com/WeisonWei/nota</url>
+        <url>https://github.com/WeisonWei/nota/tree/master</url>
         <!--connection, developerConnection: 都是连接字符串，其中后者是具有write权限的scm连接 -->
         <!--需要打包项目的git地址-->
         <developerConnection>scm:git:https://github.com/WeisonWei/nota.git</developerConnection>
