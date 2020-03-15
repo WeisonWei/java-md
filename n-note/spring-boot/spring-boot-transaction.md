@@ -12,7 +12,7 @@
     6. AbstractPlatformTransactionManager.getTransaction（），创建了一个新的事务。
 5. PlatformTransactionManager 这个接口中定义了三个方法 getTransaction创建事务，commit 提交事务，rollback 回滚事务。她的实现类是 AbstractPlatformTransactionManager这个。
 6. 在Transactional这个中，有一个参数 Propagation的属性，他里面有七中类型，REQUIRED，REQUIRES_NEW,NESTED,这三个都是新建事务，其他的都不实用事务。
-￼![binaryTree](../../images/docker/docker-desktop.png "binaryTree")
+￼![binaryTree](../../n-images/docker/docker-desktop.png "binaryTree")
 
 8. 当一个方法中嵌套使用@Transactional。如果没有设置属性 Propagation，默认为REQUIRED,她只会在上下文创建一个事务。当设置属性为REQUIRES_NEW的时候，她会创建一个新的事务。
 9. try catch的使用，当一个事务中如果对异常进行了捕获，而且没有抛出异常的情况下，事务是不起作用的，只有抛出异常，事务会自己trycatch,然后进行回滚操作。

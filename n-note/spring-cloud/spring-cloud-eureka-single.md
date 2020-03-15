@@ -62,7 +62,7 @@ eureka:
 
  > http://localhost:8761    
 
-![binaryTree](../../images/eureka-server.PNG "binaryTree")
+![binaryTree](../../n-images/eureka-server.PNG "binaryTree")
 
 ## 2 Eureka Client
 ### 2.1 核心依赖 
@@ -123,6 +123,6 @@ eureka:
  
  
  
- ![binaryTree](../../images/eureka-client.PNG "binaryTree")
+ ![binaryTree](../../n-images/eureka-client.PNG "binaryTree")
 
 
