@@ -1,2 +1,54 @@
 # nota
+
 Note per l'apprendimento di back end
+
+## Base
+### HTTP
+### JVM 
+### JAVA BASE
+### JAVA THREAD
+### JAVA STREAM
+### JAVA EXCEPTION
+
+## SPRING
+### SPRING MVC
+### SPRING WEBFLUX
+### SPRING BOOT
+### SPRING DATA
+### SPRING CLOUD
+
+## ORM
+### JDBC
+### JPA
+### HIBERNATE
+### MYBATIS
+
+## RPC
+### DUBBO
+
+## DISTRIBUTED SYSTEM
+### ZOOKEEPER
+### EUREKA
+### CONSOLE
+
+## DATABASE
+### MYSQL
+### REDIS
+### MONGODB
+### H2
+### ELASTICSEARCH
+### POSTGRESQL
+
+## DEVOPS
+### LINUX
+### UBUNTU
+### GIT
+### DOCKER
+### GITHUB&GITLAB
+### CI/CD
+ 
+## DZT
+### Design Patterns
+### TDD
+### DDD
+### MICRO SERVICE
