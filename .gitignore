@@ -33,3 +33,6 @@ docs/
 
 ### Nodejs ###
 node_modules/
+
+### release ###
+.properties
