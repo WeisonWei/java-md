@@ -6,7 +6,7 @@
     <groupId>com.back</groupId>
     <artifactId>nota</artifactId>
     <packaging>jar</packaging>
-    <version>1.0.1-SNAPSHOT</version>
+    <version>1.0.3-SNAPSHOT</version>
 
     <name>nota</name>
 
