@@ -28,3 +28,21 @@ git push origin master:release
 
 
 
+
+手动发消息：
+```java
+
+
+type = TeachingStudentTaskMessage
+
+{
+ "studentId":"431935847672320000", 
+ "star":"null", 
+ "courseId":"601", 
+ "courseTitle":"《交通秩序》", 
+ "messageType":"COMPLETE_COURSE", 
+ "courseDate":"2020-03-12", 
+ "lessonType":"TRIAL", 
+ "lesson":"S1L1U2Lesson2"
+}
+```
