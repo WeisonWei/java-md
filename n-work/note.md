@@ -30,6 +30,9 @@ git push origin master:release
 
 
 手动发消息：
+admin/123123
+测试环境mq:http://47.98.38.59:15672
+开发mq:http://47.97.210.170:15672
 ```java
 
 
