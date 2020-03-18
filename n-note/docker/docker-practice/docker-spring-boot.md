@@ -8,9 +8,9 @@ Docker Desktop ：2.1.0.3
 2. 开启Win10专业版Hyper-V   
 3. 注册账户并登录   
 图示1：   
-![binaryTree](../../images/docker/dockerDesktop1.PNG "binaryTree")   
+![binaryTree](../../n-images/docker/dockerDesktop1.PNG "binaryTree")   
 图示2：     
-![binaryTree](../../images/docker/dockerDesktop2.PNG "binaryTree")
+![binaryTree](../../n-images/docker/dockerDesktop2.PNG "binaryTree")
 4. 安装portainer(这个是一个图形化工具，可选)   
 
 ## 1 新建SpringBoot WEB应用
@@ -83,7 +83,7 @@ Docker Desktop ：2.1.0.3
 
 ```
 
-![binaryTree](../../images/springBoot-docker.PNG "binaryTree")    
+![binaryTree](../../n-images/springBoot-docker.PNG "binaryTree")    
 
 
 ### 1.2 Dockerfile
@@ -107,7 +107,7 @@ mvn dockerfile:build -- 打包docker镜像
 ```   
   
 或者执行组合的：` mvn clean install dockerfile:build` 图示：   
-![binaryTree](../../images/springBoot-docker-package.PNG "binaryTree")    
+![binaryTree](../../n-images/springBoot-docker-package.PNG "binaryTree")    
 
 
 ## 3 启动镜像
@@ -117,14 +117,14 @@ mvn dockerfile:build -- 打包docker镜像
 ``` shell
 docker images 
 ```
-![binaryTree](../../images/springBoot-docker-image.PNG "binaryTree")    
+![binaryTree](../../n-images/springBoot-docker-image.PNG "binaryTree")    
 ### 3.2 启动容器
 通过REPOSITORY启动：   
 
 ``` shell
 docker run -p 8181:8181 -t  springboot-docker/springboot-docker 
 ```
-![binaryTree](../../images/springBoot-docker-image-start.PNG "binaryTree")    
+![binaryTree](../../n-images/springBoot-docker-image-start.PNG "binaryTree")    
 
 通过IMAGE ID启动：   
 
@@ -132,15 +132,15 @@ docker run -p 8181:8181 -t  springboot-docker/springboot-docker
 docker run -p 8181:8181 -t 5ac1425a71de  
 ```
 
-![binaryTree](../../images/springBoot-docker-image-start2.PNG "binaryTree")    
+![binaryTree](../../n-images/springBoot-docker-image-start2.PNG "binaryTree")    
 
 
 ### 3.4 到portainer上查看状态   
-![binaryTree](../../images/springBoot-docker-image-start1.PNG "binaryTree")    
+![binaryTree](../../n-images/springBoot-docker-image-start1.PNG "binaryTree")    
 
 ## 4 调用接口   
 用浏览器调用 `localhost:8181` --映射--> docker容器8181端口：   
-![binaryTree](../../images/springBoot-docker-api.PNG "binaryTree")    
+![binaryTree](../../n-images/springBoot-docker-api.PNG "binaryTree")    
 
 
 参考：   

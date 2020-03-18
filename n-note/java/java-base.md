@@ -39,7 +39,7 @@ public enum Day {
 
 ## 2 数据集合 
 ### 2.1 Collection
-![binaryTree](../../images/collection.jpg "binaryTree")
+![binaryTree](../../n-images/collection.jpg "binaryTree")
 
 |List接口主要实现| 数据结构| 线程安全|其他特性|
 | ------ | ------ | ------ | ------ | 
@@ -59,7 +59,7 @@ EnumSet|不确定|线程不安全|枚举的专用Set
 
 
 ### 2.2 map
-![binaryTree](../../images/map.jpg "binaryTree")
+![binaryTree](../../n-images/map.jpg "binaryTree")
 
 |Map主要实现|数据结构|有序|线程安全|父类|其他特性|
 | ------ | ------ | ------ | ------ | ------ | ------ |
@@ -93,7 +93,7 @@ ArrayList是线程不安全的，Vector是线程安全的，效率肯定没有Ar
 
 ## 3 线程
 
-![binaryTree](../../images/thread-status.png "binaryTree")
+![binaryTree](../../n-images/thread-status.png "binaryTree")
 
 ```java
 
@@ -162,7 +162,7 @@ _包路径：java.util.function_
 
 
 **Lambda表达式:**   
-![binaryTree](../../images/lambda.png "binaryTree")
+![binaryTree](../../n-images/lambda.png "binaryTree")
 
 ```java
 // 没有参数

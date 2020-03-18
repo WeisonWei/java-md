@@ -1,7 +1,7 @@
 # Docker安装、运行MySql镜像
 环境信息：WIN10专业版    
 Docker:19.03.2    
-![binaryTree](../../images/docker/docker-desktop.png "binaryTree")
+![binaryTree](../../n-images/docker/docker-desktop.png "binaryTree")
 ## 操作步骤
 1.拉取运行MySql      
 ```shell script
@@ -31,7 +31,7 @@ ce10ad37915dde92f04c4e95fb08eca2a4169e8b86d5485ebe32b5952f1fbb49
 ```
 
 图示：     
-![binaryTree](../../images/docker/docker-mysql-image.png "binaryTree")      
+![binaryTree](../../n-images/docker/docker-mysql-image.png "binaryTree")      
 3.进入`myDockerMysql`的mysql实例的Docker容器，执行命令给root开启可远程登录       
 ```shell script  
 #进入myDockerMysql容器 windows下老板powerShell执行要加winpty   
@@ -52,23 +52,23 @@ root@84ec54033d15:/# exit;
 
 图示：       
 
-![binaryTree](../../images/docker/docker-mysql-in.png "binaryTree")   
+![binaryTree](../../n-images/docker/docker-mysql-in.png "binaryTree")   
 4.查看容器内MySQL运行状况      
 
 可通过命令`docker ps`或者`Portainer工具`查看容器内MySQL运行情况：  
    
-![binaryTree](../../images/docker/docker-mysql-portainer.png "binaryTree")   
+![binaryTree](../../n-images/docker/docker-mysql-portainer.png "binaryTree")   
 5.使用客户端连接容器内运行的MySQL     
 
-![binaryTree](../../images/docker/docker-mysql-connect1.png "binaryTree")   
+![binaryTree](../../n-images/docker/docker-mysql-connect1.png "binaryTree")   
 
 随便找个表查一查：      
 
-![binaryTree](../../images/docker/docker-mysql-connect2.png "binaryTree")   
+![binaryTree](../../n-images/docker/docker-mysql-connect2.png "binaryTree")   
 
 通过虚拟出来的IP访问，连接不上：   
 
-![binaryTree](../../images/docker/docker-mysql-connect3.png "binaryTree")   
+![binaryTree](../../n-images/docker/docker-mysql-connect3.png "binaryTree")   
 
 
 
