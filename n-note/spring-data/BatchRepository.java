@@ -1,25 +1,22 @@
 package com.meishubao.app.service.account.repository.v1;
 
-import com.meishubao.app.base.entity.account.TaskLog;
-import org.springframework.transaction.annotation.Transactional;
+import com.meishubao.app.base.entity.BaseEntity;
+import lombok.extern.slf4j.Slf4j;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
-import java.util.Collection;
 import java.util.Iterator;
 
+@Slf4j
+public abstract class BatchRepository {
 
-public class TaskLogRepositoryV1Impl implements TaskLogRepositoryV1 {
-
-    private final static int BATCH_SIZE = 500;
+    private static final int BATCH_SIZE = 5000;
 
     @PersistenceContext
     private EntityManager entityManager;
 
-    @Override
-    @Transactional
-    public Collection<TaskLog> batchSave(Collection<TaskLog> collection) {
-        Iterator<TaskLog> iterator = collection.iterator();
+    public <T extends BaseEntity> Iterable<T> batchSave(Iterable<T> iterable) {
+        Iterator<T> iterator = iterable.iterator();
         int index = 0;
         while (iterator.hasNext()) {
             entityManager.persist(iterator.next());
@@ -33,13 +30,11 @@ public class TaskLogRepositoryV1Impl implements TaskLogRepositoryV1 {
             entityManager.flush();
             entityManager.clear();
         }
-        return collection;
+        return iterable;
     }
 
-    @Override
-    @Transactional
-    public Collection<TaskLog> batchUpdate(Collection<TaskLog> collection) {
-        Iterator<TaskLog> iterator = collection.iterator();
+    public <T extends BaseEntity> Iterable<T> batchUpdate(Iterable<T> iterable) {
+        Iterator<T> iterator = iterable.iterator();
         int index = 0;
         while (iterator.hasNext()) {
             entityManager.merge(iterator.next());
@@ -53,6 +48,6 @@ public class TaskLogRepositoryV1Impl implements TaskLogRepositoryV1 {
             entityManager.flush();
             entityManager.clear();
         }
-        return collection;
+        return iterable;
     }
 }
