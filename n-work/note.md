@@ -49,3 +49,76 @@ type = TeachingStudentTaskMessage
  "lesson":"S1L1U2Lesson2"
 }
 ```
+
+```java
+type --> OrderCompletedMessage
+
+{
+	"teacherId": "null",
+	"couponUserId": "0",
+	"order": {
+		"id": "1816",
+		"cid": "0",
+		"mid": "0",
+		"ctime": "1584521948555",
+		"utime": "1584521957496",
+		"del": "0",
+		"uid": "431935847672320000",
+		"stage": "3",
+		"grouponId": "0",
+		"invitePrizeId": "0",
+		"outTradeNo": "xiong2020031816590898343",
+		"type": "ALONE",
+		"regtype": "RENEW",
+		"packagesType": "SYSTEM_COURSE_YEAR",
+		"sup": "DEFAULT",
+		"packagesId": "4",
+		"appleProductId": "system",
+		"packagesName": "小熊美术年系统课",
+		"topicId": "3",
+		"addressId": "627",
+		"couponUserId": "0",
+		"packagesCourseWeek": "48",
+		"packagesCourseDay": "0",
+		"teacherId": "0",
+		"payChannel": "8",
+		"payChannelUser": "0",
+		"payPageOrigin": "",
+		"totalAmount": "0.04",
+		"amount": "0.04",
+		"discountAmount": "0.0",
+		"gemIntegral": "0.0",
+		"bearIntegral": "0.0",
+		"endtime": "0",
+		"buytime": "1584521957492",
+		"status": "COMPLETED"
+	},
+	"pay": {
+		"id": "1301",
+		"cid": "0",
+		"mid": "0",
+		"ctime": "1584521949080",
+		"utime": "1584521957475",
+		"del": "0",
+		"productId": "0",
+		"packagesId": "4",
+		"appleProductId": "",
+		"uid": "431935847672320000",
+		"oid": "1816",
+		"title": "小熊美术年系统课",
+		"type": "DEFAULT",
+		"channel": "",
+		"outTradeNo": "xiong2020031816590898343",
+		"transactionId": "4200000508202003182932588922",
+		"totalFee": "0.04",
+		"tradeType": "APP",
+		"outRefundNo": "",
+		"refundId": "",
+		"refundFee": "0.0",
+		"refundType": "",
+		"status": "SUCESS",
+		"buytime": "1584521956000"
+	},
+	"sending": "true"
+}
+```
