@@ -13,6 +13,7 @@ EntityManager对象在一组实体类与底层数据源之间进行 O/R 映射�
 
 > https://docs.oracle.com/javaee/7/api/javax/persistence/EntityManager.html
 > https://www.cnblogs.com/lone5wolf/p/10940827.html
+> https://www.cnblogs.com/blog5277/p/10661096.html
 
 
 ```yaml
