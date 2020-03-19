@@ -26,9 +26,9 @@ getReference (Class<T> entityClass,Object primaryKey)：与find()方法类似，
 
 ### 3.3 persistence
 persist (Object entity)：用于将新创建的 Entity 纳入到 EntityManager 的管理。该方法执行后，传入 persist() 方法的 Entity 对象转换成持久化状态。
-①、如果传入 persist() 方法的 Entity 对象已经处于持久化状态，则 persist() 方法什么都不做。
-②、如果对删除状态的 Entity 进行 persist() 操作，会转换为持久化状态。
-③、如果对游离状态的实体执行 persist() 操作，可能会在 persist() 方法抛出 EntityExistException(也有可能是在flush或事务提交后抛出)。
+1.如果传入 persist() 方法的 Entity 对象已经处于持久化状态，则 persist() 方法什么都不做。
+2.如果对删除状态的 Entity 进行 persist() 操作，会转换为持久化状态。
+3.如果对游离状态的实体执行 persist() 操作，可能会在 persist() 方法抛出 EntityExistException(也有可能是在flush或事务提交后抛出)。
 
 ### 3.4 remove
 remove (Object entity)：删除实例。如果实例是被管理的，即与数据库实体记录关联，则同时会删除关联的数据库记录，不能移除游离对象；
