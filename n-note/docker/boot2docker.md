@@ -11,7 +11,7 @@ Running pre-create checks...
 (swarm-manager) Downloading /Users/admin/.docker/machine/cache/boot2docker.iso from https://github.com/boot2docker/boot2docker/releases/download/v19.03.5/boot2docker.iso
 ```
 
-下载这个步骤卡了半个小时，手动下载也不行，然后找同时翻墙下了下，百度网盘 --> 地址
+下载，百度网盘 --> 地址
 下载后放到`/Users/admin/.docker/machine/cache/`就可以了；
 
 
