@@ -7,6 +7,13 @@ import java.util.Optional;
 
 
 public class OptionalTest {
+
+    @Test
+    public void use333() {
+        Optional<Object> empty = Optional.empty();
+        Object o = empty.get();
+    }
+
     @Test
     public void use1() {
         Optional<String> str = Optional.ofNullable("123");
