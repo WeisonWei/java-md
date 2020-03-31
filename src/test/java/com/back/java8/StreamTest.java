@@ -4,10 +4,7 @@ import com.back.domain.Student;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -150,6 +147,19 @@ public class StreamTest {
                 .flatMap(student -> student.stream())
                 .collect(Collectors.groupingBy(Student::getSex, Collectors.counting()));
         System.out.println("stringLongMap--->" + stringLongMap); // {女=3, 男=4}
+
+    }
+
+    @Test
+    public void nullStream() {
+        //sorted()对stream进行自然顺序排序，或传入Comparator实现自定义的排序
+
+        Optional<Object> o1 = Arrays.asList(null)
+                .stream()
+                .findAny()
+                .map(o -> null);
+
+        System.out.println();
 
     }
 

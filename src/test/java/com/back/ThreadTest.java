@@ -1,12 +1,13 @@
 package com.back;
 
 import com.back.domain.Student;
+import org.junit.jupiter.api.Test;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
-public class Test {
-    @org.junit.Test
+public class ThreadTest {
+    @Test
     public void equals() {
         Student student1 = new Student("Wade", null, "男", 0);
         Student student2 = new Student("Terence", 13, "男", 2);
@@ -25,13 +26,15 @@ public class Test {
 
     }
 
-    @org.junit.Test
+    @Test
     public void date() {
         Calendar cal = Calendar.getInstance();
         cal.add(Calendar.DATE, -1);
         String yesterday = new SimpleDateFormat("yyyy-MM-dd ").format(cal.getTime());
         System.out.println(yesterday);
     }
+
+
 
 
 }

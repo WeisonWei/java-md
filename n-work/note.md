@@ -122,3 +122,122 @@ type --> OrderCompletedMessage
 	"sending": "true"
 }
 ```
+
+
+
+
+```java
+{
+        "name": "完成第一周体验课",
+        "desc": "体验课开课后，4天内完成第一周体验课",
+        "type": "COURSE",
+        "tag": "COMPLETE_FIRST_WEEKLY_COURSE",
+        "status": "ACTIVE",
+        "amount": 1000,
+        "isRepeatable": false,
+        "needFetch": false,
+        "courses": "0",
+        "checkBuy": false
+      }
+
+
+
+
+      {
+              "name": "完成第二周体验课",
+              "desc": "体验课开课后，4天内完成第二周体验课",
+              "type": "COURSE",
+              "tag": "COMPLETE_SECOND_WEEKLY_COURSE",
+              "status": "ACTIVE",
+              "amount": 1500,
+              "isRepeatable": false,
+              "needFetch": false,
+              "courses": "0",
+              "checkBuy": false
+            }
+
+
+            {
+                    "name": "购买系统课",
+                    "desc": "体验课开课后15天内购买系统课",
+                    "type": "COURSE",
+                    "tag": "BUY_SYSTEM_COURSE",
+                    "status": "ACTIVE",
+                    "amount": 3000,
+                    "isRepeatable": false,
+                    "needFetch": false,
+                    "courses": "1",
+                    "checkBuy": false
+                  }
+
+
+
+                  {
+                          "id": "1",
+                          "cid": "0",
+                          "mid": "0",
+                          "ctime": "0",
+                          "del": "0",
+                          "name": "首次完成体验课",
+                          "desc": "报名体验课，并首次完成1节体验课的学习，即可完成任务获得小熊币奖励。",
+                          "type": "COURSE",
+                          "tag": "LEARN_EXPERIENCE_COURSE",
+                          "status": "ACTIVE",
+                          "amount": 300,
+                          "isRepeatable": false,
+                          "needFetch": true,
+                          "courses": "1",
+                          "checkBuy": true,
+                          "taskUrl": "artaiclass://art?type=open&page=mycourse",
+                          "buyUrl": "https://www.xiaoxiongmeishu.com/h5/fortyNine/fortyNineExperience"
+                        }                  
+
+
+
+
+
+                        {
+                                "id": "5",
+                                "cid": "0",
+                                "mid": "0",
+                                "ctime": "0",
+                                "del": "0",
+                                "name": "每天首次分享课后报告",
+                                "desc": "每天首次分享当日或过往课程的课后报告，即可完成任务获得小熊币奖励。",
+                                "type": "COURSE",
+                                "tag": "SHARE_TASK_REPORT",
+                                "status": "ACTIVE",
+                                "amount": 30,
+                                "isRepeatable": true,
+                                "needFetch": true,
+                                "starValue": 1,
+                                "courses": "0,1",
+                                "checkBuy": true,
+                                "taskUrl": "artaiclass://art?type=open&page=mycourse",
+                                "buyUrl": "https://www.xiaoxiongmeishu.com/h5/fortyNine/fortyNineExperience"
+                              }
+
+
+
+                              
+                              {
+                                "id": "6",
+                                "cid": "0",
+                                "mid": "0",
+                                "ctime": "0",
+                                "del": "0",
+                                "name": "首次绑定微信公众号",
+                                "desc": "首次关注【小熊美术AI课】微信公众号，并点击自定义菜单，绑定学习手机号，即可完成任务获得小熊币奖励。",
+                                "type": "BINDING_WEIXIN",
+                                "tag": "BINDING",
+                                "status": "ACTIVE",
+                                "amount": 200,
+                                "isRepeatable": false,
+                                "needFetch": true,
+                                "checkBuy": false
+                              }
+
+```
+
+1.消息已经错过 L1无法记录 -- 查看完成当日课程用户 给补数据
+2.400报错
