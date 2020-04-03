@@ -52,8 +52,5 @@ Git 配置信息也有三个地方可以存储，根据加载顺序依次为：
 
 进入本地 github 仓库配置 git 用户信息
 
-    ~/github$ git config --local user.name "githubuser"
-    ~/github$ git config --local user.email "githubuser@xyz.com"
-    
     git config --local user.name WeisonWei
     git config --local user.email weixx3@126.com
