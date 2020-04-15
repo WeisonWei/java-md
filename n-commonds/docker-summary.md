@@ -1,13 +1,13 @@
 # Docker 常用命令
-## 1.Docker命令
-##查看docker容器版本
+-  1.Docker命令
+- 查看docker容器版本
 docker version
-##查看docker容器信息
+- 查看docker容器信息
 docker info
-##查看docker容器帮助
+- 查看docker容器帮助
 docker --help
 
-### 1.1 容器生命周期管理
+- # 1.1 容器生命周期管理
 docker run
 docker start/stop/restart
 docker kill
@@ -15,7 +15,7 @@ docker rm
 docker pause/unpause
 docker create
 docker exec
-### 1.2 容器操作
+- # 1.2 容器操作
 docker ps
 docker inspect
 docker top
@@ -30,109 +30,109 @@ docker port
 提示：对于容器的操作可使用CONTAINER ID 或 NAMES。
 3.1、容器启动
 
-##新建并启动容器，参数：-i  以交互模式运行容器；-t  为容器重新分配一个伪输入终端；--name  为容器指定一个名称
+- 新建并启动容器，参数：-i  以交互模式运行容器；-t  为容器重新分配一个伪输入终端；--name  为容器指定一个名称
 docker run -i -t --name mycentos
-##后台启动容器，参数：-d  已守护方式启动容器
+- 后台启动容器，参数：-d  已守护方式启动容器
 docker run -d mycentos
 
 注意：此时使用"docker ps -a"会发现容器已经退出。这是docker的机制：要使Docker容器后台运行，就必须有一个前台进程。解决方案：将你要运行的程序以前台进程的形式运行。
 
-##启动一个或多个已经被停止的容器
+- 启动一个或多个已经被停止的容器
 docker start redis
-##重启容器
+- 重启容器
 docker restart redis
 
 3.2、容器进程
 
-##top支持 ps 命令参数，格式：docker top [OPTIONS] CONTAINER [ps OPTIONS]
-##列出redis容器中运行进程
+- top支持 ps 命令参数，格式：docker top [OPTIONS] CONTAINER [ps OPTIONS]
+- 列出redis容器中运行进程
 docker top redis
-##查看所有运行容器的进程信息
+- 查看所有运行容器的进程信息
 for i in  `docker ps |grep Up|awk '{print $1}'`;do echo \ &&docker top $i; done
 
 3.3、容器日志
 
-##查看redis容器日志，默认参数
+- 查看redis容器日志，默认参数
 docker logs rabbitmq
-##查看redis容器日志，参数：-f  跟踪日志输出；-t   显示时间戳；--tail  仅列出最新N条容器日志；
+- 查看redis容器日志，参数：-f  跟踪日志输出；-t   显示时间戳；--tail  仅列出最新N条容器日志；
 docker logs -f -t --tail=20 redis
-##查看容器redis从2019年05月21日后的最新10条日志。
+- 查看容器redis从2019年05月21日后的最新10条日志。
 docker logs --since="2019-05-21" --tail=10 redis
 
 3.4、容器的进入与退出
 
-##使用run方式在创建时进入
+- 使用run方式在创建时进入
 docker run -it centos /bin/bash
-##关闭容器并退出
+- 关闭容器并退出
 exit
-##仅退出容器，不关闭
+- 仅退出容器，不关闭
 快捷键：Ctrl + P + Q
-##直接进入centos 容器启动命令的终端，不会启动新进程，多个attach连接共享容器屏幕，参数：--sig-proxy=false  确保CTRL-D或CTRL-C不会关闭容器
+- 直接进入centos 容器启动命令的终端，不会启动新进程，多个attach连接共享容器屏幕，参数：--sig-proxy=false  确保CTRL-D或CTRL-C不会关闭容器
 docker attach --sig-proxy=false centos 
-##在 centos 容器中打开新的交互模式终端，可以启动新进程，参数：-i  即使没有附加也保持STDIN 打开；-t  分配一个伪终端
+- 在 centos 容器中打开新的交互模式终端，可以启动新进程，参数：-i  即使没有附加也保持STDIN 打开；-t  分配一个伪终端
 docker exec -i -t  centos /bin/bash
-##以交互模式在容器中执行命令，结果返回到当前终端屏幕
+- 以交互模式在容器中执行命令，结果返回到当前终端屏幕
 docker exec -i -t centos ls -l /tmp
-##以分离模式在容器中执行命令，程序后台运行，结果不会反馈到当前终端
+- 以分离模式在容器中执行命令，程序后台运行，结果不会反馈到当前终端
 docker exec -d centos  touch cache.txt 
 
 3.5、查看容器
 
-##查看正在运行的容器
+- 查看正在运行的容器
 docker ps
-##查看正在运行的容器的ID
+- 查看正在运行的容器的ID
 docker ps -q
-##查看正在运行+历史运行过的容器
+- 查看正在运行+历史运行过的容器
 docker ps -a
-##显示运行容器总文件大小
+- 显示运行容器总文件大小
 docker ps -s
 
 
-##显示最近创建容器
+- 显示最近创建容器
 docker ps -l
-##显示最近创建的3个容器
+- 显示最近创建的3个容器
 docker ps -n 3
-##不截断输出
+- 不截断输出
 docker ps --no-trunc 
 
-##获取镜像redis的元信息
+- 获取镜像redis的元信息
 docker inspect redis
-##获取正在运行的容器redis的 IP
+- 获取正在运行的容器redis的 IP
 docker inspect --format='{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' redis
 
 3.6、容器的停止与删除
 
-##停止一个运行中的容器
+- 停止一个运行中的容器
 docker stop redis
-##杀掉一个运行中的容器
+- 杀掉一个运行中的容器
 docker kill redis
-##删除一个已停止的容器
+- 删除一个已停止的容器
 docker rm redis
-##删除一个运行中的容器
+- 删除一个运行中的容器
 docker rm -f redis
-##删除多个容器
+- 删除多个容器
 docker rm -f $(docker ps -a -q)
 docker ps -a -q | xargs docker rm
-## -l 移除容器间的网络连接，连接名为 db
+-  -l 移除容器间的网络连接，连接名为 db
 docker rm -l db 
-## -v 删除容器，并删除容器挂载的数据卷
+-  -v 删除容器，并删除容器挂载的数据卷
 docker rm -v redis
 
 
 3.8、容器与主机间的数据拷贝
 
-##将rabbitmq容器中的文件copy至本地路径
+- 将rabbitmq容器中的文件copy至本地路径
 docker cp rabbitmq:/[container_path] [local_path]
-##将主机文件copy至rabbitmq容器
+- 将主机文件copy至rabbitmq容器
 docker cp [local_path] rabbitmq:/[container_path]/
-##将主机文件copy至rabbitmq容器，目录重命名为[container_path]（注意与非重命名copy的区别）
+- 将主机文件copy至rabbitmq容器，目录重命名为[container_path]（注意与非重命名copy的区别）
 docker cp [local_path] rabbitmq:/[container_path]
 -- -- -- -- --- 
 
 
 
 
-### 1.3 容器rootfs命令
+- # 1.3 容器rootfs命令
 commit
 cp
 diff
@@ -141,7 +141,7 @@ login
 pull
 push
 search
-### 1.4 本地镜像管理
+- # 1.4 本地镜像管理
 
 
 docker image pull是下载镜像的命令。镜像从远程镜像仓库服务的仓库中下载。
@@ -152,19 +152,19 @@ docker image rm 用于删除镜像。
 docker image rm alpine:latest命令的含义是删除 alpine:latest 镜像。
 
 
-##列出本地images
+- 列出本地images
 docker images
-##含中间映像层
+- 含中间映像层
 docker images -a
 
-##只显示镜像ID
+- 只显示镜像ID
 docker images -q
-##含中间映像层
+- 含中间映像层
 docker images -qa   
 
-##显示镜像摘要信息(DIGEST列)
+- 显示镜像摘要信息(DIGEST列)
 docker images --digests
-##显示镜像完整信息
+- 显示镜像完整信息
 docker images --no-trunc
 
 
@@ -176,48 +176,48 @@ history
 save
 load
 import
-### 镜像搜索
-##搜索仓库MySQL镜像
+- # 镜像搜索
+- 搜索仓库MySQL镜像
 docker search mysql
-## --filter=stars=600：只显示 starts>=600 的镜像
+-  --filter=stars=600：只显示 starts>=600 的镜像
 docker search --filter=stars=600 mysql
-## --no-trunc 显示镜像完整 DESCRIPTION 描述
+-  --no-trunc 显示镜像完整 DESCRIPTION 描述
 docker search --no-trunc mysql
-## --automated ：只列出 AUTOMATED=OK 的镜像
+-  --automated ：只列出 AUTOMATED=OK 的镜像
 docker search  --automated mysql
-### 1.5 info|version
+- # 1.5 info|version
 info
 version
 
-##下载Redis官方最新镜像，相当于：docker pull redis:latest
+- 下载Redis官方最新镜像，相当于：docker pull redis:latest
 docker pull redis
-##下载仓库所有Redis镜像
+- 下载仓库所有Redis镜像
 docker pull -a redis
-##下载私人仓库镜像
+- 下载私人仓库镜像
 docker pull bitnami/redis
 
 2.4、镜像删除
 
-##单个镜像删除，相当于：docker rmi redis:latest
+- 单个镜像删除，相当于：docker rmi redis:latest
 docker rmi redis
-##强制删除(针对基于镜像有运行的容器进程)
+- 强制删除(针对基于镜像有运行的容器进程)
 docker rmi -f redis
-##多个镜像删除，不同镜像间以空格间隔
+- 多个镜像删除，不同镜像间以空格间隔
 docker rmi -f redis tomcat nginx
-##删除本地全部镜像
+- 删除本地全部镜像
 docker rmi -f $(docker images -q)
 
 
 
-## 2.Docker Dockerfile 命令
+-  2.Docker Dockerfile 命令
 2.5、镜像构建
-##（1）编写dockerfile
+- （1）编写dockerfile
 cd /docker/dockerfile
 vim mycentos
-##（2）构建docker镜像
+- （2）构建docker镜像
 docker build -f /docker/dockerfile/mycentos -t mycentos:1.1
 
-## 3.Docker Machine 命令
+-  3.Docker Machine 命令
 查看是否安装
 docker-machine version
 列出可用的机器
@@ -257,7 +257,7 @@ docker-machine active + 命令参数
 - version： 显示 Docker Machine 的版本或者主机 Docker 版本
 - help： 显示帮助信息
 
-## 4.Docker Compose 命令
+-  4.Docker Compose 命令
 docker-compose -f docker-compose.yml up -d
 docker-compose stop
 docker-compose kill
@@ -288,7 +288,7 @@ docker-compose stop nginx                    停止nignx容器
 docker-compose start nginx                    启动nignx容器
 
 
-## 5.Docker Swarm 命令
+-  5.Docker Swarm 命令
 docker swarm init 	用于创建一个新的 Swarm。执行该命令的节点会成为第一个管理节点，并且会切换到 Swarm 模式。
 docker swarm join-token 	用于查询加入管理节点和工作节点到现有 Swarm 时所使用的命令和 Token。
 要获取新增管理节点的命令，请执行 docker swarm join-token manager 命令；
@@ -337,12 +337,12 @@ docker node promote swarm-worker-node1
 
 4.5 Docker Swarm节点降级
 docker node demote swarm-manager
-## 6.Docker Stack 命令
+-  6.Docker Stack 命令
 docker stsack deploy     用于根据 Stack 文件（通常是 docker-stack.yml）部署和更新 Stack 服务的命令。
 docker stack ls  会列出 Swarm 集群中的全部 Stack，包括每个 Stack 拥有多少服务。
 docker stack ps 列出某个已经部署的 Stack 相关详情。该命令支持 Stack 名称作为其主要参数，列举了服务副本在节点的分布情况，以及期望状态和当前状态。
 docker stack rm 命令用于从 Swarm 集群中移除 Stack。移除操作执行前并不会进行二次确认。
-## 7.Docker Network 命令
+-  7.Docker Network 命令
 docker network connect 	将容器连接到网络。
 docker network create 	创建新的 Docker 网络。默认情况下，在 Windows 上会采用 NAT 驱动，在 Linux 上会采用
 Bridge 驱动。可以使用 -d 参数指定驱动（网络类型）。
