@@ -5,7 +5,7 @@
 那么他们之间到底是什么关系呢？
 
 
-![binaryTree](../../n-images/log.png "binaryTree")
+![binaryTree](../images/log.png "binaryTree")
 
 
 java中的日志框架
@@ -15,14 +15,14 @@ java中的日志框架
 slf4j-log4j12出现了，slf4j-log4j12在slf4j和log4j中间起到了适配的作用，也就是我们经常说的桥接。
 有了它，log4j也能符合slf4j规范了。
 
-![binaryTree](../../n-images/SJLF4j.png "binaryTree")
+![binaryTree](../images/SJLF4j.png "binaryTree")
 
 上图列出slf4j常见的日志实现以及桥接器。
 通过slf4j-log4j12可以使调用者使用slf4j提供的api来打印日志，而日志的具体实现交由log4j来完成。
 但是只是这样还不足以解决我们项目中的问题，假如我们的项目使用的是logback框架，引入的另一个jar包使用的是log4j框架，那么此时项目中就使用了两种日志框架，不免有些冗余，并且给项目带来了复杂性。此时log4j-over-slf4j 出现了，简单的说，它的作用就是讲引入的jar包中的log4j替换为log4j-over-slf4j，jar所有使用log4j打印日志的地方将会转换为slf4j打印日志。而slf4j实际调用的是logback来具体的打印日志。这样就可以将项目中的日志框架统一。
 具体可以参看下图。
 
-![binaryTree](../../n-images/log4jOverSLF4J.png "binaryTree")
+![binaryTree](../images/log4jOverSLF4J.png "binaryTree")
 
 结语
 需要注意的是，不能同时使用log4j-over-slf4j和log4j-log4j12，否则会产生死循环。同样的其他日志框架也类似。

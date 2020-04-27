@@ -56,7 +56,7 @@ Spring Security 的默认配置是要求经过了 HTTP Basic 认证成功后才�
 输出到了控制台日志里，如下图所示：
 默认的用户名是 user，密码则是一串UUID字符串:Using generated security password: ef839a8a-df8d-4bd2-89c8-e3561ac9db82
 
-![binaryTree](../../n-images/spring-security.png "binaryTree")
+![binaryTree](../images/spring-security.png "binaryTree")
 
 
 封装顺序是这样的：spring security及其各个模块=》spring cloud security=》spring boot autoconfigure的security部分，比如autoconfigure模块有个spring security的sso，是对spring security在oath2下的封装，

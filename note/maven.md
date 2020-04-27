@@ -57,7 +57,7 @@ mvn install -Dmaven.test.skip=true
 2、从Maven默认中央仓库中查找并获得依赖包（http://repo1.maven.org/maven2/），如果没有，执行第3步。 
 3、如果在pom.xml中定义了自定义的远程仓库，那么也会在这里的仓库中进行查找并获得依赖包，如果都没有找到，那么Maven就会抛出异常。
 
-￼![binaryTree](../../n-images/maven-repository.jpg "binaryTree")
+￼![binaryTree](../images/maven-repository.jpg "binaryTree")
 
 ## 7 maven-wrapper
 先来看看传统maven的使用流程

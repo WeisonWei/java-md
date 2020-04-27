@@ -94,7 +94,7 @@ eureka:
     eviction-interval-timer-in-ms: 5000
     waitTimeInMsWhenSyncEmpty: 0
 ```
- ![binaryTree](../../n-images/spring-cloud-eureka-ha-cluster-config.png "binaryTree")
+ ![binaryTree](../images/spring-cloud-eureka-ha-cluster-config.png "binaryTree")
 
 ### 1.4 Windows配置 
 修改host文件，在`C:\Windows\System32\drivers\etc`下   
@@ -114,7 +114,7 @@ java -jar cloud-eureka-0.0.1-SNAPSHOT.jar --spring.profiles.active=node2
 java -jar cloud-eureka-0.0.1-SNAPSHOT.jar --spring.profiles.active=node3
 ```
 前两个节点会有报错，是因为有节点连接超时，都启起来就好了;   
- ![binaryTree](../../n-images/spring-cloud-eureka-ha-node2-start.png "binaryTree")
+ ![binaryTree](../images/spring-cloud-eureka-ha-node2-start.png "binaryTree")
 
 
 ### 1.6 Eureka服务端控制台
@@ -128,9 +128,9 @@ http://node3:18763
 
 可以看到他们相互进行了注册，`DS Replicas`能够看到其他节点：   
    
- ![binaryTree](../../n-images/spring-cloud-eureka-ha-node1.png "binaryTree")
+ ![binaryTree](../images/spring-cloud-eureka-ha-node1.png "binaryTree")
  
- ![binaryTree](../../n-images/spring-cloud-eureka-ha-node2.png "binaryTree")
+ ![binaryTree](../images/spring-cloud-eureka-ha-node2.png "binaryTree")
 
 
 *服务端代码：*[https://github.com/WeisonWei/school-service-cloud/tree/master/cloud-eureka](https://github.com/WeisonWei/school-service-cloud/tree/master/cloud-eureka)
@@ -202,7 +202,7 @@ http://node3:18763
 
 ```
  
-![binaryTree](../../n-images/spring-cloud-eureka-ha-client.png "binaryTree")
+![binaryTree](../images/spring-cloud-eureka-ha-client.png "binaryTree")
 
 
 *客户端代码：*[https://github.com/WeisonWei/school-service/tree/master/student-service](https://github.com/WeisonWei/school-service/tree/master/student-service)

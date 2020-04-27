@@ -10,7 +10,7 @@ Spring Cloud Stream自动探测并使用在classpath下找到的binder。
 你可以轻松地在相同的代码中使用不同类型的中间件：仅仅需要在构建时包含进不同的binder。   
 在更加复杂的使用场景中，你也可以在应用中打包多个binder并让它自己选择binder，甚至在运行时为不同的通道使用不同的binder。   
 
- ![binaryTree](../../n-images/springCloud-stream.PNG "binaryTree")
+ ![binaryTree](../images/springCloud-stream.PNG "binaryTree")
 ## 1 应用程序模型
 
 - Spring Cloud Stream的应用程序模型

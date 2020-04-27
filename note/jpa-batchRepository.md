@@ -1,4 +1,4 @@
-package com.meishubao.app.service.account.repository.v1;
+```java
 
 import com.meishubao.app.base.entity.BaseEntity;
 import lombok.extern.slf4j.Slf4j;
@@ -51,3 +51,5 @@ public abstract class BatchRepository {
         return iterable;
     }
 }
+
+```
