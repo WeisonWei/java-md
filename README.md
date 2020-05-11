@@ -3,19 +3,20 @@
 Note per l'apprendimento di back end
 
 ## Base
-### HTTP
+### HTTP1.1&HTTP2&HTTPS
 ### JVM 
 ### JAVA BASE
-### JAVA THREAD
+### JAVA THREAD & CONCURRENCY
 ### JAVA STREAM
 ### JAVA EXCEPTION
 
 ## SPRING
 ### SPRING MVC
-### SPRING WEBFLUX
 ### SPRING BOOT
+### SPRING WEBFLUX
 ### SPRING DATA
 ### SPRING CLOUD
+### SPRING CLOUD ALIBABA
 
 ## ORM
 ### JDBC
@@ -37,7 +38,11 @@ Note per l'apprendimento di back end
 ### MONGODB
 ### H2
 ### ELASTICSEARCH
-### POSTGRESQL
+
+## MQ
+### RabbitMQ
+### Kafka
+### RocketMQ
 
 ## DEVOPS
 ### LINUX
@@ -52,3 +57,9 @@ Note per l'apprendimento di back end
 ### TDD
 ### DDD
 ### MICRO SERVICE
+
+## CONCEPT NOUN
+### DISTRIBUTED SYSTEM
+### MICRO SERVICE
+### JUC AQS
+### INDEX
