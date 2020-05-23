@@ -28,11 +28,10 @@ target/
 ### VS Code ###
 .vscode/
 logs/
-public/
-docs/
+
 
 ### Nodejs ###
 node_modules/
+.DS_Store
 
-### release ###
-.properties
+pom.xml.versionsBackup
