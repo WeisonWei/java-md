@@ -3,12 +3,12 @@
 
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.back</groupId>
-    <artifactId>nota</artifactId>
+    <groupId>com.weison</groupId>
+    <artifactId>java-apple</artifactId>
     <packaging>jar</packaging>
     <version>1.0.3-SNAPSHOT</version>
 
-    <name>nota</name>
+    <name>java-apple</name>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
