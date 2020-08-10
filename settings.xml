@@ -1,17 +1,22 @@
 <settings>
+
     <mirrors>
-      <mirror>
-          <id>aliyun-nexus-repo</id>
-          <name>aliyun nexus repo</name>
-          <url>http://maven.aliyun.com/nexus/content/groups/public/</url>
-          <mirrorOf>central</mirrorOf>
-      </mirror>
+        <!--aliyun用来拉镜像-->
         <mirror>
-            <id>repo</id>
-            <name>repo</name>
+            <id>alimaven</id>
+            <name>aliyun maven</name>
+            <url>http://maven.aliyun.com/nexus/content/groups/public/</url>
+            <mirrorOf>central</mirrorOf>
+        </mirror>
+
+        <!--local用来发布本地镜像-->
+        <mirror>
+            <id>local-repository</id>
+            <name>local-repository</name>
             <url>http://localhost:9081/repository/maven-public/</url>
             <mirrorOf>*</mirrorOf>
         </mirror>
+
     </mirrors>
 
     <profiles>
@@ -19,8 +24,18 @@
             <id>local-nexus-repo</id>
             <repositories>
                 <repository>
-                    <id>central</id>
-                    <url>http://central</url>
+                    <id>local-repository-releases</id>
+                    <url>http://localhost:9081/repository/maven-releases/</url>
+                    <releases>
+                        <enabled>true</enabled>
+                    </releases>
+                    <snapshots>
+                        <enabled>true</enabled>
+                    </snapshots>
+                </repository>
+                <repository>
+                    <id>local-repository-snapshots</id>
+                    <url>http://localhost:9081/repository/maven-snapshots/</url>
                     <releases>
                         <enabled>true</enabled>
                     </releases>
@@ -29,10 +44,21 @@
                     </snapshots>
                 </repository>
             </repositories>
+
             <pluginRepositories>
                 <pluginRepository>
-                    <id>central</id>
-                    <url>http://central</url>
+                    <id>local-repository-releases</id>
+                    <url>http://localhost:9081/repository/maven-releases/</url>
+                    <releases>
+                        <enabled>true</enabled>
+                    </releases>
+                    <snapshots>
+                        <enabled>true</enabled>
+                    </snapshots>
+                </pluginRepository>
+                <pluginRepository>
+                    <id>local-repository-snapshots</id>
+                    <url>http://localhost:9081/repository/maven-snapshots/</url>
                     <releases>
                         <enabled>true</enabled>
                     </releases>
@@ -41,13 +67,15 @@
                     </snapshots>
                 </pluginRepository>
             </pluginRepositories>
+
             <properties>
-                <releases.id>releases</releases.id>
-                <releases.name>releases</releases.name>
+                <releases.id>local-repository-releases</releases.id>
+                <releases.name>local-repository-releases</releases.name>
                 <releases.url>http://localhost:9081/repository/maven-releases/</releases.url>
-                <snapshots.id>snapshots</snapshots.id>
-                <snapshots.name>snapshots</snapshots.name>
+                <snapshots.id>local-repository-snapshots</snapshots.id>
+                <snapshots.name>local-repository-snapshots</snapshots.name>
                 <snapshots.url>http://localhost:9081/repository/maven-snapshots/</snapshots.url>
+                <docker.image.prefix>localhost:5000</docker.image.prefix>
             </properties>
         </profile>
     </profiles>
@@ -58,17 +86,17 @@
 
     <servers>
         <server>
-            <id>repo</id>
+            <id>local-repository</id>
             <username>admin</username>
             <password>admin</password>
         </server>
         <server>
-            <id>releases</id>
+            <id>local-repository-releases</id>
             <username>admin</username>
             <password>admin</password>
         </server>
         <server>
-            <id>snapshots</id>
+            <id>local-repository-snapshots</id>
             <username>admin</username>
             <password>admin</password>
         </server>
